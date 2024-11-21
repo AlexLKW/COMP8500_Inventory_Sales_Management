@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management - Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="common.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <div class="container">
+        <div class="sidebar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="viewInventory.html">Inventory</a></li>
+                <li><a href="userMgt.html" class="active">User Management</a></li>
+                <li><a href="#" id="logoutButton">Logout</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <h2>User Management</h2>
+            <button id="addUserButton" class="btn btn-primary">Add New User</button>
+            <div id="addUserModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Add New User</h2>
+                    <form id="addUserForm" class="grid-form">
+                        <div class="input-group">
+                          <label for="username">Username:</label>
+                          <input type="text" id="username" name="username" required>
+                        </div>
+                        <div class="input-group">
+                          <label for="password">Password:</label>
+                          <input type="password" id="password" name="password" required>
+                        </div>
+                        <div class="input-group">
+                          <label for="fname">First Name:</label>
+                          <input type="text" id="fname" name="fname" required>
+                        </div>
+                        <div class="input-group">
+                          <label for="lname">Last Name:</label>
+                          <input type="text" id="lname" name="lname" required>
+                        </div>
+                        <div class="input-group">
+                          <label for="email">Email:</label>
+                          <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="input-group">
+                          <label for="gender">Gender:</label>
+                          <select id="gender" name="gender" required>
+                            <option value="">Select Gender</option>
+                            <option value="M">Male</option>
+                            <option value="F">Female</option>
+                          </select>
+                        </div>
+                        <div class="input-group full-width">
+                          <label for="address">Address:</label>
+                          <textarea id="address" name="address" required></textarea>
+                        </div>
+                        <div class="button-group">
+                          <button type="submit">Add User</button>
+                          <button type="button">Cancel</button>
+                        </div>
+                      </form>
+                    <div id="addUserMessage" class="message"></div>
+                </div>
+            </div>
+            <table id="userList" class="table">
+                <thead>
+                    <tr>
+                        <th>Username</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- User list will be populated here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="userMgt.js"></script>
+</body>
+</html>

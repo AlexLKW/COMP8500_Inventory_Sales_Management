@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Inventory</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="inventory.js"></script>
+    <script src="common.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <div class="container">
+        <!---
+        <div class="sidebar">
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="viewInventory.html">Inventory</a></li>
+                <li><a href="userMgt.html">User Management</a></li>
+                <li><a href="#" id="logoutButton">Logout</a></li>
+            </ul>
+        </div>
+        -->
+        <div class="main-content">
+            <h2>View Inventory</h2>
+            <button id="addButton">Add</button>
+            <button id="refreshButton">Refresh</button>
+            <div id="messageContainer"></div>
+            <table id="inventoryList">
+                <thead>
+                    <tr>
+                        <th>SKU</th>
+                        <th>Name</th>
+                        <th>Size</th>
+                        <th>Color</th>
+                        <th>Category</th>
+                        <th>Buy Price</th>
+                        <th>Sell Price</th>
+                        <th>Quantity</th>
+                        <th>Min Stock</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Inventory list will be populated here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Add Item Modal -->
+    <div id="addModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Add New Item</h2>
+            <form id="addItemForm" class="grid-form">
+                <div class="input-group">
+                    <label for="addSku">SKU:*</label>
+                    <input type="text" id="addSku" required>
+                    <span class="help-text">Unique identifier for the item</span>
+                </div>
+                <div class="input-group">
+                    <label for="addName">Name:*</label>
+                    <input type="text" id="addName" required>
+                </div>
+                <div class="input-group">
+                    <label for="addQuantity">Quantity:*</label>
+                    <input type="number" id="addQuantity" required min="0">
+                </div>
+                <div class="input-group">
+                    <label for="addSize">Size:</label>
+                    <input type="text" id="addSize">
+                </div>
+                <div class="input-group">
+                    <label for="addColor">Color:</label>
+                    <input type="text" id="addColor">
+                </div>
+                <div class="input-group">
+                    <label for="addCategory">Category:</label>
+                    <input type="text" id="addCategory">
+                </div>
+                <div class="input-group">
+                    <label for="addBuyPrice">Buy Price:</label>
+                    <input type="number" id="addBuyPrice" step="0.01" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="addSellPrice">Sell Price:</label>
+                    <input type="number" id="addSellPrice" step="0.01" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="addMinStock">Min Stock:</label>
+                    <input type="number" id="addMinStock" min="0">
+                </div>
+                <div class="input-group full-width">
+                    <label for="addDescription">Description:</label>
+                    <textarea id="addDescription"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="submitAddItem">Add Item</button>
+                    <button type="button" id="cancelAddItem">Cancel</button>
+                </div>
+            </form>
+            <div id="addItemMessage" class="message"></div>
+        </div>
+    </div>
+
+    
+    <!-- Modal for Update -->
+    <div id="updateModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Update Item</h2>
+            <form id="updateItemForm" class="grid-form">
+                <input type="hidden" id="updateSku">
+                <div class="input-group">
+                    <label for="updateName">Name:*</label>
+                    <input type="text" id="updateName" required>
+                </div>
+                <div class="input-group">
+                    <label for="updateQuantity">Quantity:*</label>
+                    <input type="number" id="updateQuantity" required min="0">
+                </div>
+                <div class="input-group">
+                    <label for="updateSize">Size:</label>
+                    <input type="text" id="updateSize">
+                </div>
+                <div class="input-group">
+                    <label for="updateColor">Color:</label>
+                    <input type="text" id="updateColor">
+                </div>
+                <div class="input-group">
+                    <label for="updateCategory">Category:</label>
+                    <input type="text" id="updateCategory">
+                </div>
+                <div class="input-group">
+                    <label for="updateBuyPrice">Buy Price:</label>
+                    <input type="number" id="updateBuyPrice" step="0.01" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="updateSellPrice">Sell Price:</label>
+                    <input type="number" id="updateSellPrice" step="0.01" min="0">
+                </div>
+                <div class="input-group">
+                    <label for="updateMinStock">Min Stock:</label>
+                    <input type="number" id="updateMinStock" min="0">
+                </div>
+                <div class="input-group full-width">
+                    <label for="updateDescription">Description:</label>
+                    <textarea id="updateDescription"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="submit" id="submitUpdateItem">Update Item</button>
+                    <button type="button" id="cancelUpdateItem">Cancel</button>
+                </div>
+            </form>
+            <div id="updateItemMessage" class="message"></div>
+        </div>
+    </div>
+</body>
+</html>

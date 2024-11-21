@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Management</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <script src="sales.js" defer></script> 
+    <script src="common.js" defer></script> 
+</head>
+<body>
+  <header>
+    <h1>Sales Management System</h1>
+  </header>
+  <div class="container">
+    <div class="main-content">
+
+      <!-- New Sale Section -->
+      <!--
+      <div class="new-sale-section">
+        <h2>New Sale</h2>
+        <div class="item-search">
+          <input type="text" id="skuInput" placeholder="Enter SKU">
+          <input type="number" id="quantityInput" placeholder="Quantity">
+          <button id="addToCartButton">Add to Cart</button>
+        </div>
+
+        <div class="shopping-cart">
+          <h3>Shopping Cart</h3>
+          <table id="cartTable">
+            <thead>
+              <tr>
+                <th>SKU</th>
+                <th>Name</th>
+                <th>Quantity</th>
+                <th>Price</th>
+                <th>Subtotal</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+            <tfoot>
+              <tr>
+                <td colspan="4">Total:</td>
+                <td id="cartTotal">$0.00</td>
+                <td></td> 
+              </tr>
+            </tfoot>
+          </table>
+          <button id="completeSaleButton">Complete Sale</button>
+        </div> 
+      </div>
+      -->
+      
+      <!-- Sales History Section -->
+      <div class="sales-history">
+        <h2>Sales History</h2>
+        <div class="filters">
+          <input type="date" id="dateFrom" value=""> 
+          <input type="date" id="dateTo" value="">    
+          <button id="filterSales">Filter</button>
+        </div>
+        <table id="salesHistoryTable">
+          <thead>
+            <tr>
+              <th>Sale ID</th>
+              <th>Date</th>
+              <th>Customer ID</th>
+              <th>Total Amount</th>
+              <th>Status</th> 
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+    </div> 
+  </div>
+</body>
+</html>

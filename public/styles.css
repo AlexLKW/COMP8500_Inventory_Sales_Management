@@ -1,0 +1,236 @@
+/* General Styles */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Header Styles */
+header {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 200px;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* Main Content Styles */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+/* Table Styles */
+#inventoryList, #userList, #salesHistoryTable { 
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+#inventoryList th, #inventoryList td,
+#userList th, #userList td,
+#salesHistoryTable th, #salesHistoryTable td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+#inventoryList th, #userList th, #salesHistoryTable th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+#inventoryList tr:nth-child(even),
+#userList tr:nth-child(even),
+#salesHistoryTable tr:nth-child(even) { 
+  background-color: #f9f9f9;
+}
+
+#inventoryList tr:hover,
+#userList tr:hover,
+#salesHistoryTable tr:hover { 
+  background-color: #f5f5f5;
+}
+
+.low-stock {
+  background-color: #ffdddd;
+}
+
+/* Button Styles */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.editButton, .deleteButton {
+  margin-right: 5px;
+}
+
+.deleteButton {
+  background-color: #f44336;
+}
+
+.deleteButton:hover {
+  background-color: #da190b;
+}
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Form Styles for Modal */
+.grid-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.input-group, .form- ctrl {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label, .form-ctrl label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input, .form-ctrl input,
+.input-group textarea, .form-ctrl textarea,
+.input-group select, .form-ctrl select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.input-group input[type="number"]::-webkit-inner-spin-button,
+.input-group input[type="number"]::-webkit-outer-spin-button,
+.form-ctrl input[type="number"]::-webkit-inner-spin-button,
+.form-ctrl input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-group .help-text, .form-ctrl .help-text {
+  font-size: 12px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-group button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group button[type="button"] {
+  background-color: #ccc;
+  color: #333;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-group button[type="submit"]:hover,
+.button-group button[type="button"]:hover {
+  opacity: 0.8;
+}
+
+/* Full-width fields */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* Message styles */
+.message {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #666;
+}
